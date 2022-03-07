@@ -1,0 +1,161 @@
+$calcWidth: 320px;
+$calcHeight: 755px;
+$calcTrim: 20px;
+
+.calculator-wrapper {
+  background: white;
+  color: #111317;
+  padding: 80px 20px;
+  width: 320px;
+  min-width: 320px;
+  min-height: 755px;
+  float: right;
+  clip-path: polygon(
+    $calcTrim 0,
+    $calcWidth - $calcTrim 0,
+    $calcWidth $calcTrim,
+    $calcWidth $calcHeight - $calcTrim,
+    $calcWidth - $calcTrim $calcHeight,
+    $calcTrim $calcHeight,
+    0 $calcHeight - $calcTrim,
+    0 $calcTrim
+  );
+
+  div,
+  span,
+  label,
+  h4,
+  input {
+    max-width: $calcWidth - 2 * $calcTrim;
+  }
+
+  .calculator-header {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .input-label {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+  }
+
+  .input-inner-label {
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+
+  .label-euro {
+    margin-left: -20px;
+  }
+
+  .label-days {
+    margin-left: -50px;
+  }
+
+  .error-label {
+    color: #e1261c;
+  }
+
+  .income,
+  .leaveDays {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #a7b7d8;
+    box-shadow: 0 0 2px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .tuberculosis-label {
+    position: absolute;
+    margin-left: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  .hasTuberculosis {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .tuberculosis-info-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .calculator-button {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #911812 0%, #e1261c 100%);
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    &:active {
+      background: linear-gradient(90deg, #911812 100%, #e1261c 100%);
+    }
+  }
+
+  .divider-line {
+    width: 320px;
+    max-width: 320px;
+    height: 1px;
+    background: #e9edf4;
+    margin-left: -$calcTrim;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .result-wrapper {
+    display: flex;
+    text-align: center;
+    line-height: 15px;
+
+    .employer,
+    .insurance {
+      flex: 1;
+
+      .title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 15px;
+      }
+      .days {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .compensation {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .daily-title,
+      .daily-compensation {
+        font-size: 12px;
+        font-weight: 400;
+        color: #7a818e;
+      }
+    }
+  }
+
+  .final-result {
+    text-align: center;
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .compensation {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}

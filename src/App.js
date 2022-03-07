@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Calculator from './components/Calculator';
+import Content from './components/Content';
+import { Col, Container, Row } from 'react-bootstrap';
+import './components/Calculator'
+import './App.scss';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='main-wrapper'>
+        <Row>
+            <Col lg={8} md={12}>
+                <Content />
+            </Col>
+            <Col lg={4} md={12} className='calculator-column'>
+                <Calculator />
+            </Col>
+        </Row>
+    </Container>
   );
 }
 

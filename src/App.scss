@@ -1,0 +1,19 @@
+.main-wrapper {
+  font-family: Sora;
+}
+
+@media screen and (max-width: 991px) {
+  .calculator-column {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    padding: 0;
+  }
+}
