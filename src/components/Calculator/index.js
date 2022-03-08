@@ -82,15 +82,11 @@ const Calculator = () => {
     }, [submittedIncome, submittedLeaveDays, employerCompensation, insuranceCompensation]);
 
     useEffect(() => {
-        if (employerDays || insuranceDays) {
-            setTotalDays(employerDays + insuranceDays);
-        }
+        setTotalDays(employerDays + insuranceDays);
     }, [employerDays, insuranceDays]);
 
     useEffect(() => {
-        if (employerCompensation || insuranceCompensation) {
-            setTotalCompensation(roundNumbers(employerCompensation + insuranceCompensation));
-        }
+        setTotalCompensation(roundNumbers(employerCompensation + insuranceCompensation));
     }, [employerCompensation, insuranceCompensation]);
 
 
