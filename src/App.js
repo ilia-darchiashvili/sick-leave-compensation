@@ -1,4 +1,4 @@
-
+import * as React from 'react';
 import Calculator from './components/Calculator';
 import Content from './components/Content';
 import { Col, Container, Row } from 'react-bootstrap';
